@@ -10,7 +10,7 @@
         % audio signals with 32k,65k,131k and 256k samples
 % Output:
         %AvgPsnr : average of images PSNRs after hiding audio  
-        %AvgKl :   average of images Kullback–Leibler divergence after hiding audio
+        %AvgKl :   average of images Kullbackâ€“Leibler divergence after hiding audio
         %AvgErr : average of bit error rate from extracted audio(with or without attack) 
         %AvgPsnrAttack : average of images PSNRs after attack to images
         % AvgSNR : average of signal to noise ratio on audios
