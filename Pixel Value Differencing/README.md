@@ -1,1 +1,1 @@
-# sPixel Value Differencing
+# Pixel Value Differencing
