@@ -39,7 +39,7 @@ def bin2ascii(inputs):
 
 
 def main():
-    img = Image.open("image.png")
+    img = Image.open("stego.png")
     pxs = img.load()     # 2D Array pxs[x,y] ; pxs[0,0] = top left
     col,row = img.size
     R=[8,8,16,32,64,128] #[2,2,4,4,4,8,8,16,16,32,32,64,64]
