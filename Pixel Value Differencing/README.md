@@ -1,1 +1,1 @@
-# steganography
+# sPixel Value Differencing
