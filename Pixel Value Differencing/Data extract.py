@@ -59,9 +59,9 @@ def main():
                 secret_bits.append(bin(diff-lk)[2:].zfill(n_bits))
     secret_bits=''.join(secret_bits)
     hex_sec=str(hex(int(secret_bits,2)))[2:]
-    #if len(hex_sec)%2!=0:
-    hex_sec='0'+hex_sec
-    secret=bytes.fromhex(hex_sec[:-1])
+    if len(hex_sec)%2!=0:
+        hex_sec+=hex_sec+'0'
+    secret=bytes.fromhex(hex_sec)
     print(secret[:1200])
 
 if __name__=='__main__':
