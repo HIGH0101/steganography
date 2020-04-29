@@ -29,6 +29,13 @@ def boundry_check(ranges_list,block):
         else:
             return d, False
 
+def split_n(line, n):
+    return [line[i:i+n] for i in range(0, len(line), n)]
+
+
+def bin2ascii(inputs):
+    return ''.join(map(lambda x: chr(int(x, 2)),
+                   split_n(inputs, 8)))
 
 def main():
     img = Image.open("stego.png")
@@ -58,11 +65,8 @@ def main():
                 n_bits=int(math.log2(uk-lk+1))    #len of bits embedded
                 secret_bits.append(bin(diff-lk)[2:].zfill(n_bits))
     secret_bits=''.join(secret_bits)
-    hex_sec=str(hex(int(secret_bits,2)))[2:]
-    if len(hex_sec)%2!=0:
-        hex_sec+=hex_sec+'0'
-    secret=bytes.fromhex(hex_sec)
-    print(secret[:1200])
+    secret=bin2ascii(secret_bits)
+    print(secret[:150])
 
 if __name__=='__main__':
     main()
